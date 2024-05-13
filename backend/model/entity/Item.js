@@ -5,16 +5,17 @@ class Item {
     this._Produto = Produto;
     this._Valor = Valor;
   }
-  IdNota() {
+  get IdNota() {
     return this._IdNota;
   }
-  IdItem() {
+  get IdItem() {
     return this._IdItem;
   }
-  IdProduto() {
+  get Produto() {
     return this._Produto;
   }
-  IdValor() {
+  get Valor() {
     return this._Valor;
   }
 }
+module.exports = Item;

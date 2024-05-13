@@ -1,4 +1,5 @@
 const notaController = require("../controller/notaController");
+const itemController = require("../controller/itemController");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -8,7 +9,10 @@ app.use(cors());
 
 app.post("/cadastrar", (req, res) => {
   const notacontroller = new notaController();
-  notacontroller.cadastrar(req.body);
+  const itemcontroller = new itemController();
+  notacontroller.cadastrar(req.body).then(() => {
+    itemcontroller.cadastrar(req.body.idNota, req.body.Itens);
+  });
 });
 app.get("/", () => {});
 app.listen("8080", (err) => {
