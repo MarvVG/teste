@@ -1,3 +1,4 @@
+// Entidade Nota que representa tabela NotaFiscal no Banco de dados
 class Nota {
   constructor(idNota, Emissor, Data) {
     this._idnota = idNota;

@@ -1,3 +1,4 @@
+// Entidade Item que representa tabela Item no Banco de dados
 class Item {
   constructor(IdNota, IdItem, Produto, Valor) {
     this._IdNota = IdNota;

@@ -1,3 +1,4 @@
+const { json } = require("express");
 const bd = require("./bd");
 class notaDAO {
   async cadastrar(Nota) {
@@ -9,6 +10,14 @@ class notaDAO {
           resolve();
         }
       );
+    });
+  }
+  async listarNotas() {
+    new Promise((resolve, reject) => {
+      bd.query(`select * from notaFiscal;`, (err, data) => {
+        if (err) return reject(err);
+        return resolve(data);
+      });
     });
   }
 }
