@@ -7,8 +7,9 @@ class notaController {
   }
   async exportar() {
     const notadao = new notaDAO();
-    const resposta = await notadao.listarNotas();
-    console.log(resposta);
+    notadao.listarNotas().then((result) => {
+      console.log(result); //Está retornando vazio
+    });
   }
 }
 

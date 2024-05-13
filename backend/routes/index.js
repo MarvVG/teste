@@ -1,6 +1,8 @@
 const notaController = require("../controller/notaController");
 const itemController = require("../controller/itemController");
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
 const cors = require("cors");
 const app = express();
 
@@ -16,7 +18,14 @@ app.post("/cadastrar", (req, res) => {
 });
 app.get("/exportarJSON", () => {
   const notacontroller = new notaController();
-  notacontroller.exportar();
+  const notas = notacontroller.exportar(); // Receberia as Notas com os itens em JSON
+  fs.writeFile(
+    path.join(__dirname, "../../", "notas.json"),
+    "conteudo que seria recebido",
+    (err) => {
+      console.log(err);
+    }
+  );
 });
 app.listen("8080", (err) => {
   if (err) console.log(err);
