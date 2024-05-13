@@ -12,25 +12,23 @@
         <label for="idNota">IdNota<input type="text" id="idNota" /></label>
         <label for="Emissor">Emissor<input type="text" id="Emissor" /></label>
         <label for="Data">Data<input type="date" id="Data" /></label>
-        <button>Adicionar novo Item</button>
+        <button id="AdicionarLinha">Adicionar novo Item</button>
       </div>
       <div class="div-2">
-        <table class="table">
+        <table class="table" id="table">
           <thead>
             <tr>
               <td>Item</td>
               <td>Produto</td>
               <td>Valor</td>
-              <td>Editar</td>
               <td>Excluir</td>
             </tr>
           </thead>
           <tbody>
-            <td>1</td>
-            <td>Carro</td>
-            <td>120</td>
-            <td><button>Editar</button></td>
-            <td><button>Excluir</button></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><button class="btn-exluir">Excluir</button></td>
           </tbody>
         </table>
       </div>
@@ -38,5 +36,6 @@
         <button>Salvar</button>
       </div>
     </main>
+    <script src="scripts/Cadastrar.js"></script>
   </body>
 </html>

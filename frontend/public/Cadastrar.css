@@ -26,6 +26,7 @@ main {
 }
 .div-1 button {
   width: 10em;
+  height: 25px;
 }
 .div-2 {
   width: 0 auto;
@@ -34,10 +35,12 @@ main {
 .table {
   border: 1px solid black;
   text-align: center;
+  border-collapse: collapse;
 }
 .table td {
   width: 35vw;
-  height: 4vh;
+  height: 5vh;
+  border-bottom: 1px solid black;
 }
 .div-3 {
   margin-top: 40px;
@@ -46,4 +49,5 @@ main {
 }
 .div-3 button {
   width: 8em;
+  height: 25px;
 }
