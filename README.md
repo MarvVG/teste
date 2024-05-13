@@ -1,0 +1,1 @@
+Criei o banco de dados, as telas para cadastrar, editar,excluir , listar as notas/itens e implementei a função cadastrar notas e itens.Além disso, criei ,parcialmente, a lógica de exportar para o formato JSON.
