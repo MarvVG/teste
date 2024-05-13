@@ -1,3 +1,5 @@
+// const { json } = require("body-parser");
+
 const btnLinha = document.getElementById("AdicionarLinha");
 const btnSalvar = document.getElementById("btn-salvar");
 const table = document.getElementById("table");
@@ -38,8 +40,8 @@ async function Cadastrar(nota) {
   await fetch("http://localhost:8080/cadastrar", {
     method: "post",
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
+      "Content-Type": "application/json",
     },
-    body: nota,
+    body: JSON.stringify(nota),
   });
 }
