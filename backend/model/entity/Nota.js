@@ -1,16 +1,17 @@
 class Nota {
-  constructor(idNota, Emissor, Valor) {
+  constructor(idNota, Emissor, Data) {
     this._idnota = idNota;
     this._Emissor = Emissor;
     this._Data = Data;
   }
-  idNota() {
+  get idNota() {
     return this._idnota;
   }
-  Emissor() {
+  get Emissor() {
     return this._Emissor;
   }
-  Data() {
+  get Data() {
     return this._Data;
   }
 }
+module.exports = Nota;
