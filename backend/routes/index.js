@@ -14,7 +14,10 @@ app.post("/cadastrar", (req, res) => {
     itemcontroller.cadastrar(req.body.idNota, req.body.Itens);
   });
 });
-app.get("/", () => {});
+app.get("/exportarJSON", () => {
+  const notacontroller = new notaController();
+  notacontroller.exportar();
+});
 app.listen("8080", (err) => {
   if (err) console.log(err);
   console.log("Server on");
