@@ -23,16 +23,23 @@ btnSalvar.addEventListener("click", () => {
     const idItem = document.getElementById(`idItem${i}`);
     const Produto = document.getElementById(`Produto${i}`);
     const Valor = document.getElementById(`Valor${i}`);
-    console.log(idItem.value, Produto.value, Valor.value);
     itens.push([idItem.value, Produto.value, parseFloat(Valor.value)]);
   }
-  console.log(idNota.value);
-  const dados = {
+  const Nota = {
     idNota: idNota.value,
     Emissor: Emissor.value,
     Data: Data.value,
     Itens: itens,
   };
-  console.log(itens);
-  console.log(dados);
+  Cadastrar(Nota);
 });
+async function Cadastrar(nota) {
+  console.log(nota);
+  await fetch("http://localhost:8080/cadastrar", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: nota,
+  });
+}
