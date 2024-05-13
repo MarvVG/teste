@@ -3,30 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cadastrar e Editar Notas</title>
+    <link rel="stylesheet" href="public/Cadastrar.css" />
   </head>
   <body>
-    <div>
-      <label for="idNota">IdNota<input type="text" id="idNota" /></label>
-      <label for="Emissor">Emissor<input type="text" id="Emissor" /></label>
-      <label for="Data">Data<input type="date" id="Data" /></label>
-      <button>Adicionar novo Item</button>
-    </div>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <td>Item</td>
-            <td>Produto</td>
-            <td>Valor</td>
-            <td>Editar</td>
-            <td>Excluir</td>
-          </tr>
-        </thead>
-      </table>
-    </div>
-    <div>
-      <button>Salvar</button>
-    </div>
+    <main>
+      <div class="div-1">
+        <label for="idNota">IdNota<input type="text" id="idNota" /></label>
+        <label for="Emissor">Emissor<input type="text" id="Emissor" /></label>
+        <label for="Data">Data<input type="date" id="Data" /></label>
+        <button>Adicionar novo Item</button>
+      </div>
+      <div class="div-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Item</td>
+              <td>Produto</td>
+              <td>Valor</td>
+              <td>Editar</td>
+              <td>Excluir</td>
+            </tr>
+          </thead>
+          <tbody>
+            <td>1</td>
+            <td>Carro</td>
+            <td>120</td>
+            <td><button>Editar</button></td>
+            <td><button>Excluir</button></td>
+          </tbody>
+        </table>
+      </div>
+      <div class="div-3">
+        <button>Salvar</button>
+      </div>
+    </main>
   </body>
 </html>
